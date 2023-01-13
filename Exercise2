@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+public class App {
+
+    static Scanner scan = new Scanner(System.in);
+
+    public static void main(String[] args) throws Exception {
+
+        drive("Drive!");
+
+        scan.close();
+
+    }
+
+    static void drive (String Learning) {
+
+        System.out.println("You're taking the driving exam!");
+
+        drive2(Learning);
+
+        String feedback = getFeedBack(Learning);
+
+        // Define the base case / stopping condition
+
+        if (feedback.equals("no")) {
+
+            // Do something to reach the goal
+
+            trainer(Learning);
+
+            // Recursive call
+
+            drive(Learning);
+
+        } else if (feedback.equals("yes")) {
+
+            drive1(Learning);
+        }
+
+    }
+
+    private static void trainer(String learning) {
+
+        System.out.println("Practicing Driving Skills again!!");        
+    }
+
+    static void drive2(String learning) {
+
+        System.out.println("Testing Driving Skills!");
+
+    }
+
+    static String getFeedBack(String learning) {
+
+        System.out.println("Did I pass the Driving exam? (Enter \"yes\" or \"no\")");
+
+        String feedback = scan.next();
+
+        return feedback;
+
+    }
+
+    static void instructor(String learning) {
+
+        System.out.print("Give some advice:");
+
+        String advice = scan.next();
+
+        System.out.println("Keep on learning, more time to practice " + advice);
+
+    }
+
+    static void drive1(String learning) {
+
+        System.out.println("you passed the exam to " + learning);
+
+    }
+
+}

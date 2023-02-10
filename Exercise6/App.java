@@ -1,5 +1,3 @@
-import javax.swing.event.ChangeEvent;
-
 public class App {
     public static void main(String[] args) throws Exception {
     
@@ -18,10 +16,6 @@ public class App {
         Cashier c1 = new Cashier();
         c1.checkOut(item2);
         c1.checkOut(item3);
-
-        Cashier c1 = new Cashier();
-        c1.showPrice(item2);
-        c1.showPrice(item3);
 
         GroceryItem[] itemArray = new GroceryItem[2];
         itemArray[0] = item2;

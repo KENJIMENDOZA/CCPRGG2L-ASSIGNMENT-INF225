@@ -1,36 +1,54 @@
-public class App {
-    public static void main(String[] args) throws Exception {
-    
-        GroceryItem item1 = new GroceryItem();
-        item1.name = "Chikulet";
-        item1.showItemName();
+public class App {   
+    public static void main (String [] args) throws Exception{       
+       
+        GroceryItem item1 = new GroceryItem();       
+       
+        item1.name = "Tissue";       
+        item1.Price=100.00;        
+        item1.showItemName();       
+        item1.showItemPrice();       
+       
         
-        GroceryItem item2 = new Toothbrush();
-        item2.name = "Colgate";
-        item2.showItemName();
-
-        GroceryItem item3 = new Toothpaste();
-        item3.name = "Close up";
-        item3.showItemName();
-
-        Cashier c1 = new Cashier();
-        c1.checkOut(item2);
-        c1.checkOut(item3);
-
-        GroceryItem[] itemArray = new GroceryItem[2];
-        itemArray[0] = item2;
-        itemArray[1] = item3;
-
-        for (int i = 0; i <  itemArray.length; i++) { 
-            itemArray[i].showItemName();
-        }
-   
-        Dog myDog = new Dog();
-        myDog.eat();
-
+        GroceryItem item2 = new Toothbrush();       
+        item2.name="Colgate ";       
+        item2.Price=250.00;       
+        item2.showItemName();       
+        item2.showItemPrice();      
+       
+        
+        GroceryItem item3= new Toothpaste();    
+        item3.name="Pepsodent ";       
+        item3.Price=1000.00;       
+        item3.showItemName();      
+        item3.showItemPrice();      
+        
+        
+        Cashier c1= new Cashier();    
+        c1.showPrice(item1);    
+        c1.showPrice(item2);      
+        c1.showPrice(item3);      
+        double total=item1.Price+item2.Price+item3.Price;     
+        System.out.println(total);     
+        c1.checkout(item1);     
+        c1.checkout(item2);      
+        c1.checkout(item3);      
+       
+        GroceryItem[] itemarray= new GroceryItem[2];     
+        itemarray[0]=item2;     
+        itemarray[1]=item3;   
+       
+        for ( int i=0; i < itemarray.length; i++) {          
+            itemarray[i].showItemName();        }      
+        Dog mydog= new Dog();     
+        mydog.eat();
+        
         Lion myLion = new Lion();
         myLion.walk();
         myLion.run();
+        
     }
-
+    
 }
+
+        
+        
